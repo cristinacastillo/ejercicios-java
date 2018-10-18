@@ -6,6 +6,7 @@ public class ejrecicio13{
   double a;
   double b;
   double c;
+  double aux;
   
     Scanner s=new Scanner (System.in);
     
@@ -19,37 +20,26 @@ public class ejrecicio13{
     c=Double.parseDouble(s.nextLine());
     
   
-    if((a>b)&&(a>c)){
+    if(a>b){
+      aux = a;
+      a = b;
+      b = aux;
     }
-     if(b>c){
-  
-      System.out.printf("El orden ascendete seria: %.2f > %.2f > %.2f", c, b, a);
+    else if(b>c){
+      aux = b;
+      b = c;
+      c = aux;
     }
-    
-		else{
-			System.out.printf("\n El orden ascente seria: %.2f > %.2f > %.2f", b, c, a);
-		}
-
-    if((b>a)&&(b>c)){
+    if(a>b){
+      aux = a;
+      a = b;
+      b = aux;
     }
-      
-		if(a>c){
-			
-			System.out.printf("\n El orden ascendete seria: %.2f > %.2f > %.2f", c, a, b);
-		}
-		else {
-			System.out.printf("\n El orden ascente sería: %.2f > %.2f > %.2f", a ,c, b);
-		}
-    
-    if((c>a)&&(c>b)){
-    }
-		if(a>b){
-			
-			System.out.printf("\n El orden ascendete seria: %.2f > %.2f > %.2f", b, a, c);
-		}
-		else{
-			System.out.printf("\nEl orden ascente seria: %.2f > %.2f > %.2f", a, b, c);
-      
-		}
-	}
+    System.out.printf("Número menor %.2f , número intermedio %.2f , número mayor %.2f",a,b,c);
+  }
 }
+    
+    
+      
+      
+      

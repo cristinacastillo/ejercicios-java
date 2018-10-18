@@ -19,7 +19,7 @@ public class ejercicio11{
     segundosTranscurridos = (hora*3600) + (minutos*60);
     segundosHastaMedianoche = (24*3600) - segundosTranscurridos;
     
-    System.out.printf("Desde las "+hora+": "+minutos+" hasta la medianoche faltan "+segundosTranscurridos+" segundos");
+    System.out.printf("Has introducido %d horas %d minutos y quedan %d segundos.",hora,minutos,segundosHastaMedianoche);
     
   }
 }

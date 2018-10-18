@@ -15,10 +15,14 @@ public class ejercicio14{
   if((num%2)==0){
     System.out.println("El número introducido es par. ");
   }
-  
-  else if((num%5)==0){
+  else{
+    System.out.println("El número introducido es impar. ");
+  }
+
+  if((num%5)==0){
     System.out.println("El número es divisible entre 5");
   }
+    
   else{
     System.out.println("El numero no es par ni divisible entre 5");
     

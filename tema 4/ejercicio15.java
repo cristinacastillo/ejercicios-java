@@ -24,13 +24,13 @@ public class ejercicio15{
         
         case 1:
           System.out.println("   "+r);
-          System.out.println(" "+r+r+r);
+          System.out.println("   "+r+r+r);
           System.out.println(r+r+r+r+r+r+r);
         break;
         
         case 2:
           System.out.println(r+r+r+r+r+r+r);
-          System.out.println(" "+r+r+r);
+          System.out.println("  "+r+r+r);
           System.out.println("   "+r);
         break;
         
@@ -44,6 +44,7 @@ public class ejercicio15{
           System.out.println(r+r+r);
           System.out.println(r+r);
           System.out.println(r);
+          break;
           
         case 4:
           System.out.println("    "+r);
