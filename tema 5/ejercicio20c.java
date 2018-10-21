@@ -30,21 +30,21 @@ public class ejercicio20c {
       }
       else if(i==altura){
         
-        //bucle para los simbolos de dentro
+        //pintar ultima linea
         
         for( int j=1; j<=anchoPiramide; j++){
           
           System.out.print(c);
         }
         
-      }else{
+      }else{ //simbolos de fuera
         
         System.out.print(c);
       
       //bucle para espacios interiores
       for(int j =1; j<=anchoPiramide-2;j++){
         
-        System.out.print(" ");
+        System.out.print("-");
       
       }
       

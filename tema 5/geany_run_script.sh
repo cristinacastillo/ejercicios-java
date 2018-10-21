@@ -2,7 +2,7 @@
 
 rm $0
 
-java "ejercicio22Bis"
+java "adivinaNumero"
 
 echo "
 
