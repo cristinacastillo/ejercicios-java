@@ -13,7 +13,9 @@ public class ejercicio3 {
 			
 			System.out.println("Introduce un numero: ");
 			numero[i]= s.nextInt();
+			
 		}
+		s.close();
 		
 		for(int i =9; i>=0; i--) {
 			
