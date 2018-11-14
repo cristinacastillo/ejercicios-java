@@ -15,9 +15,9 @@ public class ejercicio9 {
 			num[i] = s.nextInt();
 
 		}
-		
+
 		s.close();
-		
+
 		for (int i = 0; i < 8; i++) {
 
 			if (num[i] % 2 == 0) {
