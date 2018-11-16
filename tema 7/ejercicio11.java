@@ -14,6 +14,8 @@ public class ejercicio11 {
 
 		int primos = 0;
 		int noprimos = 0;
+		
+		boolean p = false;
 
 		for (int i = 0; i < 10; i++) {
 
@@ -22,6 +24,15 @@ public class ejercicio11 {
 		}
 
 		s.close();
+		
+		for(int i =2; i<10;i++) {
+			
+			for(int j=0 ; j<10;j++) {
+				
+				
+				
+			}
+		}
 
 		for (int i = 0; i < 10; i++) {
 
