@@ -11,6 +11,7 @@ public class ejercicio17 {
 		boolean salida = false;
 
 		int valor = 0;
+		int ultimo;
 
 		for (int i = 0; i < 10; i++) {
 
@@ -19,28 +20,55 @@ public class ejercicio17 {
 
 		for (int i = 0; i < 10; i++) {
 
-			System.out.print(num[i] + " ");
+			System.out.println("[" + i + "]" + num[i]);
 		}
 
 		while (salida == false) {
-			for (int i = 0; i < 10; i++) {
 
-				for (int j = 0; j < 10; j++) {
+			System.out.println("Introduce un número del 0 al 100: ");
+			valor = s.nextInt();
 
-					if (valor != num[j]) {
+			for (int j = 0; j < 10; j++) {
 
-						System.out.println("Introduce un número del 0 al 100: ");
-						valor = s.nextInt();
+				if (valor == num[j]) {
 
-					} else {
+					salida = true;
 
-						valor = num[j];
-
-						salida = true;
-
-					}
 				}
 			}
+
+			if (salida == false) {
+
+				System.out.println("Incorrecto ");
+
+			}
+		}
+
+		s.close();
+
+
+		while (valor != num[0]) {
+
+			// Guarda el ultimo
+
+			ultimo = num[9];
+
+			// Rotacion a la derecha una posicion
+
+			for (int i = 9; i > 0; i--) {
+
+				num[i] = num[i - 1];
+			}
+			
+			//Se coloca el primero
+			
+			num[0]= ultimo;
+
+		}
+		
+		for (int i = 0; i < 10; i++) {
+
+			System.out.println("[" + i + "]" + num[i]);
 		}
 
 	}
