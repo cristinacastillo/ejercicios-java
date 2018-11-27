@@ -40,13 +40,13 @@ public class ejercicio6 {
 						}
 
 					}
-					// Si el num de "aux" no existe, aÃ±adelo al array
+					// Si el num de "aux" no existe, añadelo al array
 					if (comprobacion == true) {
 						num[i][x] = aux;
 					}
 				}
 
-				// AÃ±ade el numero obtenido para el array, al array nums, para comparar en la
+				// Añade el numero obtenido para el array, al array nums, para comparar en la
 				// siguiente vuelta
 				nums[contador] = num[i][x];
 				contador++;
