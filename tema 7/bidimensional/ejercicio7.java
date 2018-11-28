@@ -29,9 +29,9 @@ public class ejercicio7 {
 
 		// inicializar el array
 
-		for (int x = 0; x <= 4; x++) {
+		for (int x = 0; x <= 3; x++) {
 
-			for (int y = 0; y <= 3; y++) {
+			for (int y = 0; y <= 4; y++) {
 
 				cuadrante[x][y] = VACIO;
 			}
@@ -111,6 +111,7 @@ public class ejercicio7 {
 			// mientras que no se encuente ni mina ni tesoro, sigue pidiendo posiciones
 		} while (paso == true);
 
+		s.close();
 	}
 
 }
