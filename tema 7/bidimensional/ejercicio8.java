@@ -10,27 +10,92 @@ public class ejercicio8 {
 
 		String posicion;
 
-		
+		int filAlfil;
+		int colAlfil;
 
-		System.out.println("Introduce la posción del alfil: ");
+		for (int i = 0; i < 8; i++) {
+			for (int j = 0; j < 8; j++) {
+
+				tablero[i][j] = 0;
+			}
+		}
+
+		System.out.println("Introduce la posciÃ³n del alfil: ");
 		posicion = s.nextLine();
-		
-		char posiciony = posicion.charAt(0);
-		int posicionx = posicion.charAt(1);
 
-		
+		s.close();
 
-		System.out.printf("8| %3d %3d %3d %3d %3d %3d %3d %3d\n",tablero[0][0],tablero[0][1],tablero[0][2],tablero[0][3],tablero[0][4],tablero[0][5],tablero[0][6],tablero[0][7]);
-		System.out.printf("7| %3d %3d %3d %3d %3d %3d %3d %3d\n",tablero[1][0],tablero[1][1],tablero[1][2],tablero[1][3],tablero[1][4],tablero[1][5],tablero[1][6],tablero[1][7]);
-		System.out.printf("6| %3d %3d %3d %3d %3d %3d %3d %3d\n",tablero[2][0],tablero[2][1],tablero[2][2],tablero[2][3],tablero[2][4],tablero[2][5],tablero[2][6],tablero[2][7]);
-		System.out.printf("5| %3d %3d %3d %3d %3d %3d %3d %3d\n",tablero[3][0],tablero[3][1],tablero[3][2],tablero[3][3],tablero[3][4],tablero[3][5],tablero[3][6],tablero[3][7]);
-		System.out.printf("4| %3d %3d %3d %3d %3d %3d %3d %3d\n",tablero[4][0],tablero[4][1],tablero[4][2],tablero[4][3],tablero[4][4],tablero[4][5],tablero[4][6],tablero[4][7]);
-		System.out.printf("3| %3d %3d %3d %3d %3d %3d %3d %3d\n",tablero[5][0],tablero[5][1],tablero[5][2],tablero[5][3],tablero[5][4],tablero[5][5],tablero[5][6],tablero[5][7]);
-		System.out.printf("2| %3d %3d %3d %3d %3d %3d %3d %3d\n",tablero[6][0],tablero[6][1],tablero[6][2],tablero[6][3],tablero[6][4],tablero[6][5],tablero[6][6],tablero[6][7]);
-		System.out.printf("1| %3d %3d %3d %3d %3d %3d %3d %3d\n",tablero[7][0],tablero[7][1],tablero[7][2],tablero[7][3],tablero[7][4],tablero[7][5],tablero[7][6],tablero[7][7]);
-		
-		System.out.println("-----------------------------------------");
-		System.out.println("     a   b   c   d   e   f   g   h   ");
+		filAlfil = posicion.charAt(1) - '0';
+		filAlfil = 8 - filAlfil;
+
+		colAlfil = posicion.charAt(0) - 'a';
+
+		// posicionar el alfil
+
+		tablero[filAlfil][colAlfil] = 1;
+
+		// diagonal izq arriba
+		int i = filAlfil - 1;
+		int j = colAlfil - 1;
+
+		while ((i >= 0) && (j >= 0)) {
+
+			tablero[i][j] = 2;
+
+			i--;
+			j--;
+		}
+
+		// diagonal dcha arriba
+		i = filAlfil - 1;
+		j = colAlfil + 1;
+
+		while ((i >= 0) && (j < 8)) {
+
+			tablero[i][j] = 2;
+
+			i--;
+			j++;
+		}
+
+		// diagonal dcha abajo
+		i = filAlfil + 1;
+		j = colAlfil + 1;
+
+		while ((i < 8) && (j < 8)) {
+
+			tablero[i][j] = 2;
+
+			i++;
+			j++;
+		}
+
+		// diagonal izq abajo
+		i = filAlfil + 1;
+		j = colAlfil - 1;
+
+		while ((i < 8) && (j >= 0)) {
+
+			tablero[i][j] = 2;
+
+			i++;
+			j--;
+		}
+
+		// presentar las coordenadas
+
+		for (i = 7; i >= 0; i--) {
+
+			for (j = 0; j < 8; j++) {
+
+				if (tablero[i][j] == 2) {
+
+					System.out.print((char) ('a' + j));
+					System.out.print(8 - i + " ");
+
+				}
+			}
+		}
 	}
 
 }
