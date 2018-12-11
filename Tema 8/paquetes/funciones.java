@@ -112,6 +112,22 @@ public class funciones {
 
   }
 
-  
+  public static long voltear(long numero){
+
+    long volteado = 0;
+
+    while (numero > 0) {
+      
+      volteado = (volteado * 10) + (numero % 10);
+      
+      numero /= 10;
+      
+      }
+
+      return volteado;
+
+  }
+
+
 
 }
