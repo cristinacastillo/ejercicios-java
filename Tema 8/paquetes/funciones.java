@@ -27,14 +27,14 @@ public class funciones {
     return capicua;
   }
 
-  public static boolean esPrimo(int num) {
+  public static boolean esPrimo(int x) {
 
     int resultado;
     boolean primo = true;
 
-    for (int i = 2; i < num; i++) {
+    for (int i = 2; i < x; i++) {
 
-      resultado = num % i;
+      resultado = x % i;
 
       if (resultado == 0) {
 
@@ -123,11 +123,11 @@ public class funciones {
 
   }
 
-  public static long digitoN(long x, int n) {
+  public static long digitoN(long x, long l) {
 
     x = voltear(x);
 
-    while (n-- > 0) {
+    while (l-- > 0) {
 
       x = x / 10;
 
@@ -191,6 +191,53 @@ public class funciones {
     return (int) (x * numPotencia(10, digitos(y))) + y;
   }
 
-  
+  public static String convierteEnPalotes(long n) {
+
+    long vuelta = voltear(n);
+    String palos = "";
+
+    while (vuelta > 0) {
+
+      long aux = vuelta % 10;
+
+      for (int i = 0; i < aux; i++) {
+
+        palos += "|";
+
+      }
+      vuelta = vuelta / 10;
+
+      if (vuelta != 0) {
+
+        palos += "-";
+
+      }
+    }
+
+    return palos;
+  }
+
+  public static int[] filtraPrimos(int x[], int aux[]) {
+
+    int contador = 0;
+
+    for (int i = 0; i < x.length; i++) {
+
+      if (funciones.esPrimo(x[i])) {
+
+        aux[contador] = x[i];
+        contador++;
+      }
+    }
+    return aux;
+  }
+
+  public static int[] mostrarArray(int x[]) {
+
+    for (int i = 0; i < x.length; i++) {
+      System.out.print(x[i] + " ");
+    }
+    return x;
+  }
 
 }
