@@ -240,4 +240,130 @@ public class funciones {
     return x;
   }
 
+
+
+//ej20
+  public static int[]generaArrayInt(int tam, int min, int max) {
+
+    int[] num = new int [tam];
+    int rango = (max - min) + 1;
+
+   for(int i = 0; i < num.length; i++){
+
+     num[i] = (int)(Math.random() * rango) + min;
+   }
+
+    return num;
+  }
+
+  public static int minimoArrayInt(int x[]) {
+
+    int numMin = x[0];
+
+    for(int i = 0; i < x.length; i++){
+
+      if(numMin > x[i]){
+
+        numMin = x[i];
+      }
+
+    }
+
+    return numMin;
+  }
+
+  public static int maximoArrayInt(int x[]) {
+
+    int numMax = x[0];
+
+    for(int i = 0; i < x.length; i++){
+
+      if(numMax < x[i]){
+
+        numMax = x[i];
+      }
+
+    }
+
+    return numMax;
+  }
+
+  public static float mediaArrayInt(int x[]) {
+
+    float media = 0;
+ 
+
+    for(int i = 0; i < x.length; i++){
+
+      media+= x[i];
+  
+    }
+
+    media = media / x.length;
+
+    return media;
+  }
+
+  public static boolean estaEnArrayInt(int x[], int n) {
+ 
+    boolean esta = false;
+
+    for(int i = 0; i < x.length; i++){
+
+      if(x[i] == n){
+        
+        esta = true;
+      }
+ 
+    }
+    return esta;
+  }
+
+  public static int posicionEnArrayInt(int x[], int n) {
+ 
+    int posicion = 0;
+
+    for(int i = 0; i < x.length; i++){
+
+      if(x[i] == n){
+        
+        posicion = i;
+      }
+    
+ 
+    }
+    return posicion;
+  }
+
+  public static int[] volteaArrayInt(int x[]) {
+ 
+    int cont = 1;
+    for (int i = 0; i < x.length/2; i++) {
+    
+      int aux = x[x.length-cont];
+      x[x.length-cont] = x[i];
+      x[i] = aux;
+      cont++;
+    }
+    
+    return x;
+    
+  }
+
+  public static int[] rotaDerechaArrayInt(int x[]) {
+ 
+    int cont = 1;
+    for (int i = 0; i < x.length/2; i++) {
+    
+      int aux = x[x.length-cont];
+      x[x.length-cont] = x[i];
+      x[i] = aux;
+      cont++;
+    }
+    
+    return x;
+    
+  }
+
+
 }

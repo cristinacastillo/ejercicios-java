@@ -40,7 +40,7 @@ public class ejercicio4 {
 
         if(num[i] == j){
 
-          System.out.print(palabras[num[j]] + " ");
+          System.out.print(palabras[num[i]] + " ");
         }
       }
     }

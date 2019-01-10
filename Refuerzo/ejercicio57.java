@@ -1,5 +1,5 @@
 
-public class ejercicio5 {
+public class ejercicio57 {
   
   public static int[] mostrarArray(int x[]){
     for( int i = 0 ; i < x.length; i++){
@@ -25,11 +25,11 @@ public class ejercicio5 {
       int valor = Integer.parseInt(System.console().readLine());
       num[i] = valor;
     }
-    /*HACER LA RAIZ AL TAMAÑO DEL ARRAY */
+    /*HACER LA RAIZ AL TAMAÑO DEL ARRAY*/
     int raiz = (int)Math.sqrt(tam);
     //System.out.print(raiz);
 
-    /*CREAR ARRAY BIDIMENSIONAL */
+    /*CREAR ARRAY BIDIMENSIONAL*/
     int[][] bi = new int[raiz][raiz];
 
     /*ALMACENAR EL PRIMER ARRAY EN EL BIDIMENSIONAL */
@@ -47,7 +47,9 @@ public class ejercicio5 {
 
     /*MOSTRAR ARAY UNIDIMENSIONAL */
     mostrarArray(num);
+    System.out.println("");
     System.out.println("__________________________");
+    System.out.println("");
 
     /*MOSTRAR BIDIMENSIONAL */
     for( int i = 0 ; i < raiz; i++){
