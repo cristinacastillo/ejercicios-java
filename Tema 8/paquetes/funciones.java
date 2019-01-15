@@ -365,5 +365,173 @@ public class funciones {
     
   }
 
+  public static int[] rotaIzqArrayInt(int x[], int posiciones) {
+ 
+    for (int i = 0; i < posiciones; i++) {
+
+      int aux = x[0];
+
+      for(int j = 1; j < x.length; j++){
+
+        x[j-1]=x[j];
+
+      }
+
+      x[x.length-1] = aux;
+    } 
+
+    return x;
+  }
+
+
+  public static int[] rotaDchaArrayInt(int x[], int posiciones) {
+ 
+    for (int i = 0; i <posiciones; i++) {
+    
+      int aux = x[x.length-1];
+
+      for (int j = x.length-2 ; j >= 0; j--){ 
+
+      x[j+1] = x[j];
+      
+      }
+      x[0] = aux;
+    }
+    
+    return x;
+    
+  }
+//29
+
+  public static int[][] generaArrayBiInt(int f, int c, int max, int min) {
+ 
+    int x[][] = new int [f][c];
+
+    int range = (max - min) + 1;
+
+    for (int i = 0; i < f; i++) {
+
+      for (int j = 0 ; j < c; j++){ 
+
+        x[i][j] = (int)(Math.random() * range) + min;
+      
+      }
+    }
+    
+    return x;
+    
+  }
+
+  public static int[][] mostrarArrayBi(int x[][], int f, int c) {
+
+    for(int i = 0; i < f; i++){
+
+      for (int j = 0 ; j < c; j++){ 
+
+        System.out.print(x[i][j] + " ");
+    }
+    System.out.println("");
+  }
+
+    return x;
+  
+  }
+
+  public static int[][] filaDeArrayBiInt(int x[][], int f, int c, int filades) {
+
+    for(int i = 0; i < f; i++){
+
+      for (int j = 0 ; j < c; j++){ 
+
+        if(i == filades){
+          
+          System.out.print(x[i][j] + " ");
+
+        }
+  
+    }
+    System.out.println(" ");
+   
+  }
+    return x;
+  
+  }
+
+  public static int[][] columnaDeArrayBiInt(int x[][], int f, int c, int coldes) {
+
+    for(int i = 0; i < f; i++){
+
+      for (int j = 0 ; j < c; j++){ 
+
+        if(j == coldes){
+          
+          System.out.print(x[i][j] + " ");
+
+        }
+  
+    }
+    System.out.println(" ");
+   
+  }
+    return x;
+  
+  }
+
+  public static int[][] coordenadasEnArrayBiInt(int x[][], int f, int c, int numdes) {
+
+    boolean paso  = false;
+
+    for(int i = 0; i < f; i++){
+
+      for (int j = 0 ; j < c; j++){ 
+
+        if((x[i][j] == numdes)&&(paso == false)){
+          
+          System.out.print("Posicion ["+i+"]["+j+"]");
+          paso = true;
+
+        }
+     }
+   }
+    if(paso == false){
+
+      System.out.println("{-1,-1}");
+    }
+
+    return x;
+  
+  }
+
+  public static int[][] esPuntoDeSilla(int x[][], int f, int c, int numdes) {
+
+    boolean min  = false;
+    boolean max  = false;
+
+    int minFil = x[0][0];
+    int minCol = x[][];
+
+    for(int i = 0; i < f; i++){
+
+      for (int j = 0 ; j < c; j++){ 
+
+        if((x[i][j] == numdes)&&(paso == false)){
+          
+          System.out.print("Posicion ["+i+"]["+j+"]");
+          paso = true;
+
+        }
+     }
+   }
+    if(paso == false){
+
+      System.out.println("{-1,-1}");
+    }
+    
+    return x;
+  
+  }
+  
+
+
 
 }
