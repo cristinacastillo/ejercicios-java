@@ -1,6 +1,5 @@
 import paquetes.funciones;
 
-import paquetes.funciones;
   
 public class ejercicio36 {
 

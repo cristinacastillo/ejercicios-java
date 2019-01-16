@@ -63,7 +63,7 @@ public class tresEnRaya {
     }
     System.out.println();
     for (int j=0; j<8; j++){
-      System.out.print("—");
+      System.out.print("-");
     }
     
     for (int i=0; i<3; i++) {
@@ -74,7 +74,7 @@ public class tresEnRaya {
       }
       System.out.println();
       for (int j=0; j<8; j++){
-        System.out.print("—");
+        System.out.print("-");
       }
     }
     System.out.println();
