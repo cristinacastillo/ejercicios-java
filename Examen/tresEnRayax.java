@@ -137,12 +137,6 @@ public class tresEnRayax{
 
     }while(!tableroLleno(tablero) && !jugadorGana(tablero));
 
-    /*do{
-
-      System.out.println(" J1 Introduce posicion X: ");
-      tablero[i][j] = Integer.parseInt(System.console().readLine());
-
-    }while(tablero[i][j] == 0);*/
   }
 
 }
