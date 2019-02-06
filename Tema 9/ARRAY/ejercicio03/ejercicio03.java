@@ -12,30 +12,25 @@ import java.util.Scanner;
  * @author crcs
  */
 public class ejercicio03 {
-    
+
     public static void main(String[] args) {
-        
-        int num = 0;
+
         
         Scanner s;
         s = new Scanner(System.in);
+
+        Disco discos[] = new Disco[10];
         
-        Disco discos[] = new Disco [10];
-        
+        int num = 0;
+
         for (int i = 0; i < 10; i++) {
-            
+
             discos[i] = new Disco();
-            
+
         }
-        
-        for (int i = 0; i < 10; i++) {
-            
-            System.out.println(discos[i]);
-            
-        }
-        
-        do{
-        System.out.println("DISCOS\n"
+
+        do {
+            System.out.println("DISCOS\n"
                     + "=========\n"
                     + "1. Crear disco\n"
                     + "2. Borrar disco\n"
@@ -43,37 +38,62 @@ public class ejercicio03 {
                     + "4. Ver coleccion de discos\n"
                     + "5. Salir\n"
                     + "Elige una opción (1-5):");
-        
-        switch (num){
             
-            case 1:
-                
-                System.out.println("Introduce numero de disco que quieres crear");
-                num= s.nextInt();
-                
-                System.out.println("Autor ");
-                String autor = s.nextLine();
-                
-                System.out.println("Titulo ");
-                String titulo = s.nextLine();
-                
-                System.out.println("Genero ");
-                String genero = s.nextLine();
-                
-                System.out.println("Duracion ");
-                int duracion = Integer.parseInt(s.nextLine());
-                
-                discos[num] = new Disco ();
-                
-                
-                
-            break;
+            num = Integer.parseInt(s.nextLine());
             
-            
-            
-        }
-        
-        }while(num!=5);
+            switch (num) {
+
+                case 1:
+
+                    System.out.println("Introduce numero de disco que quieres crear");
+                    int op = Integer.parseInt(s.nextLine());
+
+                    /*System.out.println(" ");
+                    String x = s.nextLine();*/
+                    
+                    System.out.println("Autor ");
+                    String autor = s.nextLine();
+
+                    System.out.println("Titulo ");
+                    String titulo = s.nextLine();
+
+                    System.out.println("Genero ");
+                    String genero = s.nextLine();
+
+                    System.out.println("Duracion ");
+                    int duracion = Integer.parseInt(s.nextLine());
+
+                    discos[op] = new Disco(autor, titulo, genero, duracion);
+
+                    break;
+
+                case 2:
+                    
+                    System.out.println("Que disco quieres borrar");
+                    op = Integer.parseInt(s.nextLine());
+                    discos[op] = new Disco();
+
+                    break;
+
+                case 3:
+
+                    System.out.println("Que disco quieres ver");
+                    op = Integer.parseInt(s.nextLine());
+                    System.out.println(discos[op]);
+                    break;
+
+                case 4:
+
+                    for (int i = 0; i < 10; i++) {
+
+                        System.out.println(discos[i]);
+
+                    }
+                    break;
+
+            }
+
+        } while (num != 5);
     }
-    
+
 }
