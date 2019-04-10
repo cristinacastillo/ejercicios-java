@@ -350,21 +350,6 @@ public class funciones {
     
   }
 
-  public static int[] rotaDerechaArrayInt(int x[]) {
- 
-    int cont = 1;
-    for (int i = 0; i < x.length/2; i++) {
-    
-      int aux = x[x.length-cont];
-      x[x.length-cont] = x[i];
-      x[i] = aux;
-      cont++;
-    }
-    
-    return x;
-    
-  }
-
   public static int[] rotaIzqArrayInt(int x[], int posiciones) {
  
     for (int i = 0; i < posiciones; i++) {
