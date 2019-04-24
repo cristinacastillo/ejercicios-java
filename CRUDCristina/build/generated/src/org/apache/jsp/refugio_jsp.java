@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.DriverManager;
 import java.sql.Connection;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class refugio_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -143,7 +143,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("            <tr>\n");
-      out.write("            <form action=\"index.jsp\">\n");
+      out.write("            <form action=\"refugio.jsp\">\n");
       out.write("                <th scope=\"row\"><input type=\"number\" name=\"Codigo\" value=\"");
       out.print( request.getParameter("Codigo"));
       out.write("\" readonly></td>\n");
@@ -160,7 +160,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.print( request.getParameter("Peso_gr"));
       out.write("\"></td>\n");
       out.write("                <td><input type=\"number\" name=\"Estatura_cm\" value=\"");
-      out.print( request.getParameter("Estatra_cm"));
+      out.print( request.getParameter("Estatura_cm"));
       out.write("\"></td>\n");
       out.write("                <td><input type=\"text\" name=\"Adoptado\" value=\"");
       out.print( request.getParameter("Adoptdado"));
@@ -168,7 +168,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <td><input type=\"hidden\" name=\"estado\" value=\"actualizar\">\n");
       out.write("                    <input type=\"submit\" value=\"Actualizar\" name=\"enviar\"></td>\n");
       out.write("            </form>\n");
-      out.write("            <form action=\"index.jsp\">\n");
+      out.write("            <form action=\"refugio.jsp\">\n");
       out.write("                <td><input type=\"hidden\" name=\"estado\" value=\"mostrar\">\n");
       out.write("                    <input type=\"submit\" value=\"Cancelar\"></td>\n");
       out.write("            </form>\n");
@@ -183,7 +183,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
         
       out.write("\n");
       out.write("        <tr>\n");
-      out.write("        <form action = \"index.jsp\"> \n");
+      out.write("        <form action = \"refugio.jsp\"> \n");
       out.write("            <th scope=row><input type = \"number\" name = \"Codigo\"> </th>\n");
       out.write("            <td> <input type = \"text\" name = \"Nombre\" ></td>\n");
       out.write("            <td> <input type = \"text\" name = \"Raza\" ></td>\n");
@@ -221,7 +221,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("    <td>\n");
-      out.write("        <form action=\"index.jsp\" name=\"Baja\">\n");
+      out.write("        <form action=\"refugio.jsp\" name=\"Baja\">\n");
       out.write("            <input type=\"hidden\" name=\"Codigo\" value=\"");
       out.print(listado.getString("Codigo"));
       out.write("\"/>\n");
@@ -231,7 +231,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </td>\n");
       out.write("\n");
       out.write("    <td>\n");
-      out.write("        <form action=\"index.jsp\" name=\"modificar\" method=\"get\">\n");
+      out.write("        <form action=\"refugio.jsp\" name=\"modificar\" method=\"get\">\n");
       out.write("            <input type=\"hidden\" name=\"Codigo\" value=\"");
       out.print(listado.getString("Codigo"));
       out.write("\">\n");
@@ -266,7 +266,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     
       out.write("\n");
       out.write("</table>\n");
-      out.write("<script>window.history.pushState({}, document.title, \"/CRUDCristina\" + \"/index.jsp\");</script>\n");
+      out.write("<script>window.history.pushState({}, document.title, \"/CRUDCristina\" + \"/refugio.jsp\");</script>\n");
       out.write("</body>\n");
       out.write("</html>\n");
       out.write("\n");
